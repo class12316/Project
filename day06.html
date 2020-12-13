@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <bead>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #box1 {
+                width: 100px;
+                height: 100px;
+                border: 1px solid red;
+            }
+        </style>
+    </bead>
+    <body>
+        <script>
+            console.log('run js in inline script')
+        </script>
+        <div id="test"><p>test</p></div>
+        <script>
+            const oDiv = document.querySelector('#test')
+            console.log(oDiv.nodeType)
+            console.log(oDiv.nodeName)
+            console.log(oDiv.nodeValue)
+            // const oChild = oDiv.firstChild;
+            const oChild1 = oDiv.firstElementChild
+            // console.log(oChild.nodeType)
+            console.log(oChild1)
+        </script>
+        <ul id='IstCourse'>
+            <li class="course">Java</li>
+            <li class="course">JavaScript</li>
+            <li class="course">Python</li>
+            <li class="course">C</li>
+        </ul>
+        <script>
+            const oList = document.getElementById('IstCourse')
+            console.log(oList.nodeName)  //UL
+            const oElements = document.getElementsByTagName('li')
+            console.log(oElements.length)
+            const oLis = document.getElementsByClassName('course')
+            console.log(oLis.length)
+
+            const oList1 = document.querySelector('#lstCourse:last-Child')
+            console.log(oLastLi.innerHTML)
+
+            const oAllLi = document.querySelectorAll('.course')
+            console.log(oAllLi.length)
+        </script>
+        <div id="box1">
+
+        </div>
+        <script>
+            const oBox = document.querySelector("#box1")
+            console.log(oBox.getAttribute('id'))
+            oBox.setAttribute('id','box2')           
+        </script>
+        <ul id='IstLanguage'>
+            <li>JavaScript</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>AI</li>
+        </ul>
+        <script>
+            const oFrag = document.createDocumentFragment()
+
+            const oList = document.createComment('ul')
+            oList.setAttribute("id",'IstLanguage')
+
+            document.body.appendChild(oList)
+            const oItem = document.createComment('li')
+            oList.appendChild(oItem)
+            const oText = document.createTextNode('javaScript')
+            oItem.appendChild(oText)
+
+            document.body.appendChild(oFrag)
+        </script>
+        <ul id="IstLanguage">
+            <li>Java</li>
+            <li>Python</li>
+            <li>Kolin</li>
+            <li>JavaScript</li>
+        </ul>
+        <script>
+            const oList = document.querySelector("#IstLanguage")
+            // oList.setAttribute('style','border: 1px solid red')
+            // oList.removeAttribute('style')
+            oList.style.border = '1px solid red'
+            oList.style.backgroundColor = 'blue' / background-Color
+            oList.style.cssFloat = 'right'
+        </script>
+    </body>
+</html>
+
