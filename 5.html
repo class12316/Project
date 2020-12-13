@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div data-username="yangrucheng" data-password="yrc">test dataset</div>
+    <script>
+        const oDiv = document.querySelector("div")
+        console.log(oDiv.dataset)
+        console.log(oDiv.dataset.username)
+        console.log(oDiv.dataset.password)
+        oDiv.dataset.username = 'hahaha'
+        console.log(oDiv.dataset.username)
+    </script>
+</body>
+</html>

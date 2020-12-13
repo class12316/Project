@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态创建节点</title>
+</head>
+<body>
+    <script>
+    //     //最流氓的方法
+    //     let list =  `
+    // <ul>
+    //     <li>Java</li>
+    //     <li>JavaScript</li>
+    //     <li>Python</li>
+    //     <li>Swift</li>
+    // </ul>`
+
+    // document.body.innerHTML = list
+    // document.querySelector("li").textContent = "Java1"
+
+        // //老方法
+        // const oElement = document.createComment('ul')
+        // document.body.innerHTML = "<ul></ul>"
+        // document.body.appendChild(oElement)
+
+    //最古老的方法
+    const oFrag = document.
+    const oElement = document.createElement('ul')
+    const createHTML = (elementName,text) => {
+        let oItem = document.createElement(elementName)
+        let oText = document.createTextNode(text)
+        oItem.appendChild(oText)
+        document.body.appendChild(oItem)
+
+    }
+
+    createHTML('li','Java')
+    createHTML('li','JavaScript')
+    createHTML('li','Python')
+    createHTML('li','Swift')
+
+    document.body.appendChild(oFrag)
+    </script>
+</body>
+</html>

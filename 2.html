@@ -1,0 +1,20 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="myDiv">
+            <p id="myPara">test</p>
+        </div>
+        <script>
+            const oDiv = document.getElementById('myDiv')
+            // const oPara = oDiv.getElementsByTagName('p') //这方法比前面方法更安全，减少性能影响，减少搜索范围
+            const oPara = oDiv.querySelector("#myPara")
+            console.log(oDiv)
+            console.log(oPara)
+        </script>
+    </body>
+    </html>
