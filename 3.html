@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btnTest1">click me</button>
+    <button id="btnTest2" onclick="console.log('test')">click me</button>
+
+    <script>
+        const myButton = document.querySelector('button')
+        myButton.onclick = function(){
+            console.log('onclick')
+        }
+        // //通过这种方式只能设置一个事件处理程序
+        // myButton.onclick = function(){
+        //     console.log('hello')
+        // }
+        // myButton.onclick = null //去掉绑定
+
+        const callback1 = () => {
+            console.log('callback1')
+        }
+
+        const callback2 = () => {
+            console.log('callback2')
+        }
+
+        const callback3 = () => {
+            console.log('callback3')
+        }
+
+        myButton.addEventListener('click',callback,false)
+        myButton.addEventListener('click',callback2)
+        myButton.addEventListener('click',callback3) //默认在事件冒泡阶段捕获,默认值false
+        //myButton.removeEventListener('click',callback,false)
+    </script>
+</body>
+</html>

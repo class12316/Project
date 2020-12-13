@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>my div</div>
+    <script>
+        const myDiv = document.querySelector('div')
+
+        myDiv.addEventListener('click',(event) => { //event不操作可不写
+            console.log(`${event.type}`)
+        })
+
+        const helloEvent = new Event('hello',{bubbles:true,cancelable:false})
+
+        myDiv.addEventListener('hello',() => {
+            myDiv.style.backgroundColor = 'red'
+        })
+
+        myDiv.dispatchEvent(helloEvent)
+    </script>
+</body>
+</html>

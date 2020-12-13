@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>这是一个段落</p>
+    </div>
+    <script>
+        const oDiv =document.querySelector('div')
+        const oPra =document.querySelector('p')
+        const oPhase = {
+            1:'元素',
+            2:'传播阶段',
+            3:'事件阶段'
+        }
+
+        const callback = (event){
+            console.log(`元素:${event.currentTarget.tagName}.传播阶段:${oPhase[eventPhase]}`)
+        }
+        oDiv.addEventListener('click',callback,true)
+        oDiv.addEventListener('click',callback,false)
+        oPra.addEventListener('click',callback,false)
+    </script>
+</body>
+</html>

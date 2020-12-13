@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>click</button>
+
+    <script>
+        const oButton = document.querySelector('button')
+
+        const callback = function callback(){
+            console.log('Hello, Event')
+        }
+
+        oButton.addEventListener('click',callback)
+        oButton.addEventListener('click', () => {  //addEventListener针对同一事件，可绑定多个函数。
+            console.log('hello, event1')
+        },true)
+
+    </script>
+</body>
+</html>
